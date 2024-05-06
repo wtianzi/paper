@@ -1,0 +1,19 @@
+dets_df，tracks_df
+
+column_names = ['frame', 'id', 'type', 'truncated', 'occluded', 'alpha', 'bb_left', 'bb_top', 'bb_right',
+                    'bb_bottom', '3D height', '3D width', '3D length', '3D x', '3D y', '3D z', 'rotation y', 'conf']
+
+tracks_df_fr = tracks_df_fr.loc[:, ['type', 'id', 'bb_left', 'bb_top', 'bb_right', 'bb_bottom', 'conf']]
+
+
+
+
+dets_df_fr = dets_df_fr.loc[:, ['type', 'bb_left', 'bb_top', 'bb_right', 'bb_bottom', 'conf']]
+
+h = pd.DataFrame(columns=['x', 'y', 'w', 'h', 'r', 'det_cnt', 'mean_det_ov', 'med_det_ov', 'min_det_ov',
+                                          'max_det_ov', 'mean_det_cnf', 'med_det_cnf', 'min_det_cnf', 'max_det_cnf',
+                                          'hyp_cnt', 'mean_hyp_ov', 'med_hyp_ov', 'min_hyp_ov', 'max_hyp_ov',
+                                          'mean_hyp_cnf', 'med_hyp_cnf', 'min_hyp_cnf', 'max_hyp_cnf', 'type',
+                                          'bb_left', 'bb_top', 'bb_right', 'bb_bottom', 'width', 'height', 'id'])
+
+gt_df_fr = gt_df_fr.loc[:, ['type', 'bb_left', 'bb_top', 'bb_right', 'bb_bottom', 'conf']]
